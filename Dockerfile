@@ -12,7 +12,7 @@ RUN apt install git -y && apt install vim -y
 RUN gem install rails -v 7.1.2
 RUN gem install bundler:2.3.15
 WORKDIR /var/www
-COPY ./rails_7_with_docker .
+RUN git clone https://github.com/naveen2112/masterror.git 
 WORKDIR  /var/www/rails_7_with_docker
 RUN bundle install
 RUN chmod +x ./entrypoint.sh
